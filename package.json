@@ -1,0 +1,50 @@
+{
+  "name": "lawyer-chat-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "migrate:team-domain": "node scripts/migrateTeamDomain.js",
+    "migrate:team-domain:apply": "node scripts/migrateTeamDomain.js --apply",
+    "repair:case-clients": "node scripts/repairCaseClients.js",
+    "repair:case-clients:apply": "node scripts/repairCaseClients.js --apply",
+    "repair:hearings": "node scripts/repairHearings.js",
+    "repair:hearings:apply": "node scripts/repairHearings.js --apply",
+    "migrate:legacy-hearings": "node scripts/migrateLegacyHearings.js",
+    "migrate:legacy-hearings:apply": "node scripts/migrateLegacyHearings.js --apply",
+    "verify:team-domain": "node scripts/verifyTeamDomain.js",
+    "verify:team-authorization": "node scripts/verifyTeamAuthorization.js",
+    "test": "node --test tests/teamAuthorization.test.js tests/chatUpload.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "api": "^7.0.0",
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.9.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "google": "^2.1.0",
+    "google-auth-library": "^10.9.0",
+    "googleapis": "^174.0.1",
+    "groq-sdk": "^1.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.7.3",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "nodemailer": "^9.0.3",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "streamifier": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
